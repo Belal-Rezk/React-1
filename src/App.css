@@ -1,0 +1,134 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282D35;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #21222A;
+  height: 100px;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+}
+
+div > img {
+  height: 30px;
+  margin: 1em;
+  animation: logo 2s alternate-reverse linear infinite;
+}
+
+@keyframes logo {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+div > h3 {
+  color: #61DAFB;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+div > h4 {
+  color: #DEEBF8;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-image: url(../src/assets/react-icon-large.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 200px;
+}
+
+main > div {
+  margin: 5em auto;
+  max-width: 800px;
+  padding: 0 1em;
+}
+
+main h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+li {
+  padding-bottom: 1em;
+}
+
+ul {
+  padding-top: 2.5em;
+}
+
+ul li::marker {
+  font-size: 1.5em;
+  animation: bullets 8s linear infinite alternate-reverse;
+}
+
+@keyframes bullets {
+  25% {
+    color: #282D35;
+  }
+  50% {
+    color: #61DAFB;
+  }
+  75% {
+    color: #21222A;
+  }
+  100% {
+    color: #DEEBF8;
+  }
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px (mobile devices) */
+@media only screen and (max-width: 768px) {
+  header {
+    text-align: center;
+    
+  }
+
+  div > img {
+    margin: 0.5em;
+  }
+
+  div > h3 {
+    font-size: 18px;
+  }
+
+  main > div {
+    margin: 2em ;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+main{
+  background-size: 100px;
+}
+}
